@@ -1,0 +1,15 @@
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-pink: #823366;
+}
+
+@font-face {
+    font-family: "Logo";
+    src: url(../storage/font/Dos22-Font\ Bold.otf);
+}
+
+@font-face {
+    font-family: "normal";
+    src: url(../storage/font/Syne-VariableFont_wght.ttf);
+}
