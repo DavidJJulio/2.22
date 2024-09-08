@@ -9,15 +9,17 @@
 </head>
 <body>
 
-    <header>
+    <header id="inicio">
         <div class="header_logo">
             <h1>2·22</h1>
         </div>
         <nav class="header_nav">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicio">Servicio</a></li>
-                <li><a href="#redes">Redes</a></li>
+                <li><a href="#servicio">Manifiesto</a></li>
+                <li><a href="#redes">Servicios</a></li>
+                <li><a href="#registro">Registro de marca</a></li>
+                <li><a href="#thehouse">The house</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -27,7 +29,7 @@
 
     <main>
 
-        <section id="inicio" class="section_call">
+        <section class="section_call">
             <h2>¿Cafecito?</h2>
             <a href="https://wa.me/1234567890" class="cta-button"><i class='bx bxl-whatsapp'></i></a>
         </section>
@@ -45,7 +47,90 @@
 
         </section>
 
+        <section id="contacto" class="section_contacto">
+
+            <h2>Comunicate con nosotros</h2>
+            <div class="formulario_contenedor">
+                <form action="/enviar-formulario" method="POST">
+
+                    <div class="form_row">
+
+                        <div class="form_group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+
+                        <div class="form_group">
+                            <label for="Apellido">Apellido:</label>
+                            <input type="text" id="apellido" name="apellido" required>
+                        </div>
+                        
+                    </div>
+
+                    <div class="form_row">
+
+                        <div class="form_group">
+                            <label for="edad">Edad:</label>
+                            <input type="number" id="edad" name="edad" min="1" required>
+                        </div>
+                        <div class="form_group">
+                            <label for="marca">Nombre de la Marca:</label>
+                            <input type="text" id="marca" name="marca" required>
+                        </div>
+
+                    </div>
+
+                    <div class="form_group description">
+                        <label for="descripcion">Descripción:</label>
+                        <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit">Enviar</button>
+
+                </form>
+            </div>
+
+        </section>
+
     </main>
+
+
+
+    <footer class="footer">
+        <div class="footer_contacto">
+
+            <h1>Redes</h1>
+            <div>
+                <li><a href="#">    <i class='bx bxl-gmail'></i>        </a></li>
+                <li><a href="#">    <i class='bx bxl-linkedin'></i>     </a></li>
+                <li><a href="#">    <i class='bx bxl-instagram'></i>    </a></li>
+                <li><a href="#">    <i class='bx bxl-tiktok' ></i>      </a></li>
+            </div>
+
+        </div>
+
+        <div class="footer_navigation">
+
+            <h1>2·22</h1>
+            <div>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicio">Servicio</a></li>
+                <li><a href="#redes">Redes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </div>
+
+        </div>
+
+        <div class="footer_enlaces">
+
+            <h1>Politicas</h1>
+            <div>
+                <a href="/terminos-y-condiciones">Términos y condiciones</a>
+                <a href="/politica-de-privacidad">Política de Privacidad</a>
+            </div>
+            
+        </div>
+    </footer>
 
 </body>
 </html>
