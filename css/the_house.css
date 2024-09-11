@@ -1,0 +1,293 @@
+@import url(variables.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "normal";
+}
+
+/*
+
+    BODY, HEADER, MAIN
+    
+    Se da las propiedades a los elementos más generales de la página.
+    Se utiliza grid para dividir los espacios que el header y el main consumiran.
+    Se le da configuraciones generales al body.
+  
+*/
+
+header {
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+
+    height: 180vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-family: "normal";
+    background-color: #f4f4f9;
+    line-height: 1.6;
+}
+
+main {
+
+    width: 100%;
+    height: auto;
+
+    padding: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+
+    ELEMENTOS DEL HEADER
+
+*/
+
+.header_logo {
+
+    height: 8vh;
+    width: 60%;
+}
+
+.header_nav {
+
+    width: 50%;
+}
+
+.header_logo h1 {
+    margin-left: 8%;
+
+    font-size: 44px;
+    color: var(--color-black);
+    font-family: "Logo";
+    font-weight: lighter;
+}
+
+.header_nav ul {
+    width: 100%;
+
+    display: flex;
+    gap: 4%;
+    justify-content: end;
+
+    padding-right: 8%;
+
+    list-style: none;
+}
+
+.header_nav ul li a {
+
+    text-decoration: none;
+    color: var(--color-black);
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+.header_nav ul li a:hover {
+
+    color: var(--color-pink);
+}
+
+
+
+
+
+
+
+
+
+
+/*
+
+    ELEMENTOS DEL SECTION #1, THE HOUSE
+
+*/
+
+.the_house_section {
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 50px;
+}
+
+.the_house_section h1 {
+    font-size: 48px;
+}
+
+.abogado_1 {
+    width: 100%;
+    height: 800px;
+    
+    display: flex;
+    justify-content: space-evenly;
+
+    border-radius: 15px;
+
+}
+
+.img {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rebeccapurple;
+}
+
+.abogado_info {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8%;
+}
+
+.abogado_info h2 {
+    
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.areas {
+    
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+
+    FOOTER
+
+*/
+
+.footer {
+
+    width: 100%;
+    height: 40vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+
+    padding: 4%;
+    text-align: center;
+
+    background-color: var(--color-black);
+    color: white; 
+    list-style: none;
+}
+
+.footer_contacto {
+
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+
+.footer_contacto a{
+
+    font-size: 24px;
+    color: var(--color-pink);
+    text-decoration: none;
+}
+
+.footer_navigation {
+
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.footer_navigation a{
+    font-size: 24px;
+    color: var(--color-pink);
+    text-decoration: none;
+}
+
+.footer_enlaces {
+
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.footer_enlaces div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_enlaces a{
+
+    font-size: 24px;
+    color: var(--color-pink);
+    text-decoration: none;
+}
