@@ -227,10 +227,12 @@ main {
     padding: 4%;
     padding-right: 60%;
 
-    background-image: url(../storage/img/pexels-pavel-danilyuk-8112201\ 1.png);
+    background-color: white;
+
+    background-image: url(../storage/img/8777961.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom; /* Inicialmente centrada */
+    background-size: contain;
+    background-position: calc(100% - 12%) center;
 
     color: var(--color-black);
     text-align: left;
@@ -245,7 +247,6 @@ main {
 
     font-size: 48px;
     font-weight: 600;
-    color: white;
 }
 
 .section_filosofia p {
@@ -253,7 +254,7 @@ main {
     font-size: 18px;
     margin-bottom: 12px;
     line-height: 1.4;
-    color: rgba(255, 255, 255, 0.747);
+    color: rgba(0, 0, 0, 0.747);
 }
 
 
@@ -355,8 +356,9 @@ input[type="number"],
 textarea {
     width: 100%;
     padding: 14px;
-    border-radius: 8px;
-    border: 1px solid #45474b6b;
+    border: none; 
+    border-bottom: 2px solid black;
+    border-radius: 0px;
     background-color: #fff;
     font-size: 16px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -365,9 +367,9 @@ textarea {
 input[type="text"]:focus,
 input[type="number"]:focus,
 textarea:focus {
-    border-color: var(--color-pinker);
-
-    outline: none;
+    outline: none; 
+    border: 2px solid var(--color-pinker); 
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); 
 }
 
 textarea {
@@ -406,7 +408,7 @@ input[type="text"]:hover,
 input[type="number"]:hover, 
 textarea:hover {
     transform: scale(1.02);
-    border: 1px solid rgba(0, 0, 0, 0.651);
+    border: 2px solid var(--color-pinker);
 }
 
 button[type="submit"]:focus {
