@@ -45,9 +45,27 @@
 
         </section>
 
+        <script>
+            window.addEventListener('scroll', function() {
+                const section = document.querySelector('.section_filosofia');
+                let scrollPosition = window.scrollY;
+                
+                // Ajusta la posición del fondo según el scroll
+                section.style.backgroundPositionY = `${scrollPosition * -0.2}px`;
+            });
+        </script>
+        
+
         <section id="contacto" class="section_contacto elemento" data-scroll>
 
-            <h2>Comunicate con nosotros</h2>
+            <div class="contacto_container">
+
+                <h2>Comunicate con nosotros</h2>
+                <p>Cuentanos sobre tu caso y nos pondremos <br>en <span style="color: var(--color-pinker);">contacto</span> contigo para ayudarte</p>
+
+            </div>
+
+            
             <div class="formulario_contenedor">
                 <form action="/enviar-formulario" method="POST">
 
@@ -95,38 +113,47 @@
 
 
     <footer class="footer elemento" data-scroll>
-        <div class="footer_contacto">
+        <div class="footer_container">
 
-            <h1>Siguenos</h1>
-            <div>
-                <li><a href="#">    <i class='bx bxl-gmail'></i>        </a></li>
-                <li><a href="#">    <i class='bx bxl-linkedin'></i>     </a></li>
-                <li><a href="#">    <i class='bx bxl-instagram'></i>    </a></li>
-                <li><a href="#">    <i class='bx bxl-tiktok' ></i>      </a></li>
+            <div class="footer-row">
+
+                <div class="footer-links">
+                    
+                    <h4>Navegacion</h4>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Manifiesto</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Registro de marca</a></li>
+                        <li><a href="#">The house</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footer-links">
+                    
+                    <h4>Informacion legal</h4>
+                    <ul>
+                        <li><a href="#">Terminos y condiciones</a></li>
+                        <li><a href="#">Politicas de privacidad</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footer-links">
+                    
+                    <h4>Siguenos</h4>
+                    <div class="social-links">
+                        <a class="gmail" href="#"><i class='bx bxl-gmail' ></i></a>
+                        <a class="instagram" href="#"><i class='bx bxl-instagram' ></i></a>
+                        <a class="tiktok" href="#"><i class='bx bxl-tiktok'></i></a>
+                        <a class="linkedin" href="#"><i class='bx bxl-linkedin' ></i></a>
+                    </div>
+
+                </div>
             </div>
 
-        </div>
-
-        <div class="footer_navigation">
-
-            <h1>2·22</h1>
-            <div>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicio">Servicio</a></li>
-                <li><a href="#Siguenos">Siguenos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </div>
-
-        </div>
-
-        <div class="footer_enlaces">
-
-            <h1>Informacion legal</h1>
-            <div>
-                <a href="/terminos-y-condiciones">Términos y condiciones</a>
-                <a href="/politica-de-privacidad">Política de Privacidad</a>
-            </div>
-            
         </div>
     </footer>
 
