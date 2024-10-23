@@ -38,9 +38,15 @@
 
         <section id="filosofia" class="section_filosofia elemento" data-scroll>
             
-            <h2>¿Qué es 2·22?</h2>
-            <p>En 222 creemos en una visión transformadora del derecho, esa que no se limita a lo complejo de las leyes y que amplía su visión a cada dimensión de la vida: <br>la emocional, física y espiritual.</p>
-            <a href="./views/asi_lo_hacemos.html"><p>Asi lo hacemos</p></a>
+            <div class="filosofia_texto">
+                <p>En 2.22 creemos en una visión transformadora del derecho, esa que no se limita a lo complejo de las leyes y que amplía su visión a cada dimensión de la vida:</p>
+                <p class="filosofia_strong"><span class="emotion">emocional</span>   <span class="physical">física</span>   <span class="spiritual">espiritual</span></p>
+                <a href="./views/asi_lo_hacemos.html">Asi lo hacemos <i class='bx bx-right-arrow-alt' ></i></a>
+            </div>
+            <div class="filosofia_imagen">
+                <img src="./storage/img/8777961.jpg" alt="">
+            </div>
+            
 
 
         </section>
@@ -66,6 +72,7 @@
             </div>
 
             
+            
             <div class="formulario_contenedor">
                 <form action="/enviar-formulario" method="POST">
 
@@ -77,8 +84,8 @@
                         </div>
 
                         <div class="form_group">
-                            <label for="Apellido">Apellido:</label>
-                            <input type="text" id="apellido" name="apellido" required>
+                            <label for="Correo">Correo:</label>
+                            <input type="text" id="correo" name="correo" required>
                         </div>
                         
                     </div>
@@ -105,6 +112,36 @@
 
                 </form>
             </div>
+
+            <script>
+
+                const span = document.querySelector('.contacto_container span');
+                const formularioContenedor = document.querySelector('.formulario_contenedor');
+            
+                
+                span.addEventListener('mouseenter', () => {
+                    formularioContenedor.style.boxShadow = '0 8px 30px rgba(0, 0, 0, 0.315)';
+                    formularioContenedor.style.transform = 'translateY(-5px)';
+                    formularioContenedor.style.transition = 'all 0.3s ease';
+                    
+        
+                    span.style.fontWeight = '500';
+                    span.style.transition = 'all 0.3s ease';
+                });
+            
+                
+                span.addEventListener('mouseleave', () => {
+
+                    formularioContenedor.style.boxShadow = '';
+                    formularioContenedor.style.transform = '';
+                    
+                    
+                    span.style.textShadow = '';
+                    span.style.fontWeight = '';
+
+                });
+
+            </script>
 
         </section>
 
