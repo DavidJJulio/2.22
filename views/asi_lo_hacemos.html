@@ -23,6 +23,12 @@
                 <li><a href="../index.html#contacto">Contacto</a></li>
             </ul>
         </nav>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
     </header>
 
     <main>
@@ -31,41 +37,70 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer_contacto">
+    <footer class="footer elemento" data-scroll>
+        <div class="footer_container">
 
-            <h1>Siguenos</h1>
-            <div>
-                <li><a href="#">    <i class='bx bxl-gmail'></i>        </a></li>
-                <li><a href="#">    <i class='bx bxl-linkedin'></i>     </a></li>
-                <li><a href="#">    <i class='bx bxl-instagram'></i>    </a></li>
-                <li><a href="#">    <i class='bx bxl-tiktok' ></i>      </a></li>
+            <div class="footer-row">
+
+                <div class="footer-links">
+                    
+                    <h4>Navegacion</h4>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Manifiesto</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Registro de marca</a></li>
+                        <li><a href="#">The house</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footer-links">
+                    
+                    <h4>Informacion legal</h4>
+                    <ul>
+                        <li><a href="#">Terminos y condiciones</a></li>
+                        <li><a href="#">Politicas de privacidad</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footer-links">
+                    
+                    <h4>Siguenos</h4>
+                    <div class="social-links">
+                        <a class="gmail" href="#"><i class='bx bxl-gmail' ></i></a>
+                        <a class="instagram" href="#"><i class='bx bxl-instagram' ></i></a>
+                        <a class="tiktok" href="#"><i class='bx bxl-tiktok'></i></a>
+                        <a class="linkedin" href="#"><i class='bx bxl-linkedin' ></i></a>
+                    </div>
+
+                </div>
             </div>
 
-        </div>
-
-        <div class="footer_navigation">
-
-            <h1>2·22</h1>
-            <div>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicio">Servicio</a></li>
-                <li><a href="#Siguenos">Siguenos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </div>
-
-        </div>
-
-        <div class="footer_enlaces">
-
-            <h1>Informacion legal</h1>
-            <div>
-                <a href="/terminos-y-condiciones">Términos y condiciones</a>
-                <a href="/politica-de-privacidad">Política de Privacidad</a>
-            </div>
-            
         </div>
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.header_nav ul');
+        const main = document.querySelector('.manifiesto_section');
+
+        menuToggle.addEventListener('click', () => {
+            if (main.classList.contains('opacity-on')) {
+                main.style.opacity = 1;
+                main.classList.remove('opacity-on');
+                main.style.pointerEvents = 'auto'; // Habilita la interacción cuando el menú está cerrado
+            } else {
+                main.style.opacity = 0;
+                main.classList.add('opacity-on');
+                main.style.pointerEvents = 'none'; // Deshabilita la interacción mientras el menú está desplegado
+            }
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('show');
+        });
+    </script>
 
 </body>
 </html>

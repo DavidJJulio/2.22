@@ -24,17 +24,6 @@ html {
 
 }
 
-.elemento {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.5s ease-in-out;
-}
-
-.elemento.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 body {
     overflow-x: hidden;
     overflow-y: scroll;
@@ -93,51 +82,129 @@ main {
 
 */
 
+/* General Styles */
 .header_logo {
-
+    margin-left: 4%;
     height: 8vh;
-    width: 60%;
+    width: auto;
 }
 
 .header_nav {
-
     width: 50%;
 }
 
-.header_logo h1 {
-    margin-left: 8%;
-
-    font-size: 44px;
-    color: var(--color-black);
-    font-family: "Logo";
-    font-weight: lighter;
-}
-
+/* Hide menu by default for small screens */
 .header_nav ul {
-    width: 100%;
-
     display: flex;
     gap: 4%;
     justify-content: end;
-
     padding-right: 8%;
-
     list-style: none;
 }
 
-.header_nav ul li a {
+/* Hide the menu toggle button on large screens */
+.menu-toggle {
+    display: none;
+}
 
+/* Header Navigation links */
+.header_nav ul li a {
     text-decoration: none;
     color: var(--color-black);
     font-size: 16px;
     font-weight: bold;
-
     transition: color 0.3s ease;
 }
 
 .header_nav ul li a:hover {
+    color: var(--color-pinker);
+}
 
-    color: var(--color-light-green);
+.header_nav ul .focus {
+    border-radius: 8px;
+    background-color: var(--color-pinker);
+    padding: 20%;
+}
+
+.header_nav ul .focus:hover {
+    color: white;
+}
+
+.header_nav ul li {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 768px) {
+
+    .header_nav {
+        width: 100%;
+    }
+
+    .header_nav ul {
+        display: none; /* Initially hidden */
+        flex-direction: column; /* Stack menu items */
+        position: absolute;
+        top: 8vh; /* Below the header */
+        right: 0;
+        width: 100%;
+        background-color: #fff;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .header_nav ul .focus {
+        padding: 2%;
+        color: white;
+    }
+
+    .header_nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header_nav ul.show { /* Class to show the menu */
+        display: flex;
+        gap: 30px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+
+    }
+
+    /* Show the menu toggle button on mobile screens */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 5%;
+        top: 3vh;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: var(--color-black);
+        margin: 6px 0;
+        transition: 0.3s;
+    }
+
+    /* Menu toggle animation when active */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
 }
 
 
@@ -169,6 +236,8 @@ main {
 
     color: black;  
 }
+
+
 
 .section_call h2 {
     
@@ -219,11 +288,12 @@ main {
     grid-area: section_2;
 
     width: 100%;
-    height: 72vh;
+    height: auto;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     padding: 4%;
 
@@ -279,7 +349,14 @@ main {
     text-decoration: none;
     gap: 24px;
     font-size: 1.8em;
+    height: auto;
     color: var(--color-pinker);
+}
+
+.filosofia_texto a:hover {
+
+    border-bottom: solid 2px var(--color-pinker);
+
 }
 
 .filosofia_strong {
@@ -293,19 +370,19 @@ main {
 }
 
 
-.filosofia_strong .emotion {
+.emocional {
 
     animation: moveUpDown 2.8s ease-in-out infinite;
 }
 
 
-.filosofia_strong .physical {
+.fisica {
 
     animation: moveUpDown 2.6s ease-in-out infinite;
 }
 
 
-.filosofia_strong .spiritual {
+.espiritual {
     
     animation: moveUpDown 3s ease-in-out infinite;
 }
@@ -318,6 +395,51 @@ main {
     50% {
         transform: translateY(-10px);
     }
+}
+
+.section_filosofia  p {
+    
+    width: 40%;
+    font-size: 1.7em;
+    text-align: center;
+
+}
+
+.filosofia_container {
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+    padding: 4%;
+    flex-wrap: wrap;
+    
+}
+
+.filosofia_container div {
+
+    width: 25%;
+    min-width: 300px;
+    height: auto;
+    padding: 2%;
+    background-color: #f0f0f0;
+    box-shadow: 0px 0px 10px 0px rgb(109, 109, 109);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+.filosofia_container div img {
+    object-fit: contain;
+    width: 50%;
+    height: 50%;
 }
 
 
@@ -485,6 +607,25 @@ button[type="submit"]:focus {
     box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.3);
 }
 
+.section_filosofia a{
+    text-decoration: none;
+    width: auto;
+}
+
+.section_filosofia a p{
+    font-size: 2em;
+    font-weight: 500;
+    color: var(--color-black);
+    width: auto;
+}
+
+.section_filosofia a p:hover{
+    
+    color: var(--color-pinker);
+    border-bottom: 2px solid var(--color-pinker);
+    width: auto;
+}
+
 /* Estilo responsive */
 @media (max-width: 1024px) {
 
@@ -495,6 +636,21 @@ button[type="submit"]:focus {
         padding-bottom: 8%;
         padding-top: 8%;
         padding-inline: 4%;
+
+    }
+
+    .section_filosofia p {
+        font-size: 1em;
+        width: 70%;
+    }
+
+    .filosofia_container {
+        gap: 8%;
+    }
+
+    .filosofia_container div {
+
+        min-width: 130px;
 
     }
 
@@ -536,6 +692,19 @@ button[type="submit"]:focus {
     }
 }
 
+@media (max-width: 350px) {
+    
+    .section_filosofia a p{
+        position: relative;
+        margin-top: 60px;
+        font-size: 1.15em;
+        font-weight: 500;
+        color: var(--color-black);
+        width: auto;
+    }
+
+}
+
 @media (max-width: 830px) {
 
     .section_contacto {
@@ -545,9 +714,23 @@ button[type="submit"]:focus {
         padding-bottom: 26%;
     }
 
+    .section_filosofia p {
+        font-size: 1.15em;
+        width: auto;
+    }
+
+    .section_filosofia a p{
+        position: relative;
+        margin-top: 40px;
+        font-size: 1.15em;
+        font-weight: 500;
+        color: var(--color-black);
+        width: auto;
+    }
+
     .formulario_contenedor {
         min-width: 0px;
-        max-width: 400px;
+        max-width: 90vw;
     }
 
     .form_row {

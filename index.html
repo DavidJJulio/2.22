@@ -16,7 +16,7 @@
         </div>
         <nav class="header_nav">
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
+                <li><a class="focus" href="#inicio">Inicio</a></li>
                 <li><a href="./views/manifiesto.html">Manifiesto</a></li>
                 <li><a href="./views/servicios.html">Servicios</a></li>
                 <li><a href="./views/registro_marca.html">Registro de marca</a></li>
@@ -24,6 +24,12 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
     </header>
 
 
@@ -37,15 +43,38 @@
 
 
         <section id="filosofia" class="section_filosofia elemento" data-scroll>
+
+            <p>En 2.22 creemos en una visión transformadora del derecho, esa que no se limita a lo complejo de las leyes y que amplía su visión a cada dimensión de la vida:</p>
+
+            <div class="filosofia_container">
+
+                <div class="emocional">
+                    <img src="./storage/img/emotional_6911451.png" alt="">
+                    <p>Emocional</p>
+                </div>
+                <div class="fisica">
+                    <img src="./storage/img/heartbeat_3936347.png" alt="">
+                    <p>Fisica</p>
+                </div>
+                <div class="espiritual">
+                    <img src="./storage/img/care_2610167.png" alt="">
+                    <p>Espiritual</p>
+                </div>
+                
+                
+
+            </div>
+
+            <a href="#"><p>Asi lo hacemos</p></a>
             
-            <div class="filosofia_texto">
+            <!-- <div class="filosofia_texto">
                 <p>En 2.22 creemos en una visión transformadora del derecho, esa que no se limita a lo complejo de las leyes y que amplía su visión a cada dimensión de la vida:</p>
                 <p class="filosofia_strong"><span class="emotion">emocional</span>   <span class="physical">física</span>   <span class="spiritual">espiritual</span></p>
                 <a href="./views/asi_lo_hacemos.html">Asi lo hacemos <i class='bx bx-right-arrow-alt' ></i></a>
             </div>
             <div class="filosofia_imagen">
                 <img src="./storage/img/8777961.jpg" alt="">
-            </div>
+            </div> -->
             
 
 
@@ -193,6 +222,25 @@
 
         </div>
     </footer>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.header_nav ul');
+        const main = document.querySelector('.section_call');
+
+        menuToggle.addEventListener('click', () => {
+            if (main.classList.contains('opacity-on')) {
+                main.style.opacity = 1;
+                main.classList.remove('opacity-on');
+                main.style.pointerEvents = 'auto'; // Habilita la interacción cuando el menú está cerrado
+            } else {
+                main.style.opacity = 0;
+                main.classList.add('opacity-on');
+                main.style.pointerEvents = 'none'; // Deshabilita la interacción mientras el menú está desplegado
+            }
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('show');
+        });
+    </script>
 
 </body>
 </html>

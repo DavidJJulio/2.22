@@ -17,6 +17,14 @@
   
 */
 
+.header_nav ul li {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 header {
 
     width: 100%;
@@ -76,53 +84,126 @@ main {
 
 */
 
+/* General Styles */
 .header_logo {
-
+    margin-left: 4%;
     height: 8vh;
-    width: 60%;
+    width: auto;
 }
 
 .header_nav {
-
     width: 50%;
 }
 
-.header_logo h1 {
-    margin-left: 8%;
-
-    font-size: 44px;
-    color: var(--color-black);
-    font-family: "Logo";
-    font-weight: lighter;
-}
-
+/* Hide menu by default for small screens */
 .header_nav ul {
-    width: 100%;
-
     display: flex;
     gap: 4%;
     justify-content: end;
-
     padding-right: 8%;
-
     list-style: none;
 }
 
-.header_nav ul li a {
+/* Hide the menu toggle button on large screens */
+.menu-toggle {
+    display: none;
+}
 
+/* Header Navigation links */
+.header_nav ul li a {
     text-decoration: none;
     color: var(--color-black);
     font-size: 16px;
     font-weight: bold;
-
     transition: color 0.3s ease;
 }
 
 .header_nav ul li a:hover {
-
-    color: var(--color-pink);
+    color: var(--color-pinker);
 }
 
+.header_nav ul .focus {
+    border-radius: 8px;
+    background-color: var(--color-pinker);
+    padding: 20%;
+}
+
+.header_nav ul .focus:hover {
+    color: white;
+}
+
+.header_nav ul li {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 768px) {
+
+    .header_nav {
+        width: 100%;
+    }
+
+    .header_nav ul {
+        display: none; /* Initially hidden */
+        flex-direction: column; /* Stack menu items */
+        position: absolute;
+        top: 8vh; /* Below the header */
+        right: 0;
+        width: 100%;
+        background-color: white;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .header_nav ul .focus {
+        padding: 2%;
+    }
+
+    .header_nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header_nav ul.show { /* Class to show the menu */
+        display: flex;
+        gap: 30px;
+    }
+
+    /* Show the menu toggle button on mobile screens */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 5%;
+        top: 3vh;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: var(--color-black);
+        margin: 6px 0;
+        transition: 0.3s;
+    }
+
+    /* Menu toggle animation when active */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
 
 
 
@@ -234,8 +315,9 @@ main {
 
 .footer {
 
-    width: 100%;
-    height: 40vh;
+    height: 40vh auto;
+    max-width: 100vw;
+    min-width: 100%;
 
     display: flex;
     flex-direction: row;
@@ -246,63 +328,139 @@ main {
     padding: 4%;
     text-align: center;
 
-    background-color: var(--color-black);
+    background-color: black;
     color: white; 
     list-style: none;
+
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
 }
 
-.footer_contacto {
+.footer_container {
+    width: 100%;
+    display: flex;
 
-    height: 200px;
+}
 
+.footer-row {
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding-inline: 4%;
+
+    flex-wrap: wrap;
+    
+
+}
+
+.footer-links {
+
+    width: 25%;
+    min-width: 235px;
+    padding: 0 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    
+
+}
+
+.footer-links h4 {
+
+    width: 60%;
+    min-width: 182px;
+    display: inline;
+    font-size: 20px;
+    text-align: left;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid var(--color-pinker);
+    padding-bottom: 10px;
+
+}
+
+.footer-links ul li  {
+
+    list-style: none;
+
+}
+
+.footer-links ul {
+    width: 60%;
+    min-width: 182px;
 }
 
 
-.footer_contacto a{
+.footer-links ul li a {
 
-    font-size: 24px;
-    color: var(--color-pink);
+    text-align: left;
+    font-size: 18px;
     text-decoration: none;
+    color: #bbbbbb;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3 ease;
+
 }
 
-.footer_navigation {
+.footer-links ul li a:hover {
+    color: white;
+    padding-left: 6px;
+}
 
-    height: 200px;
-
+.social-links {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 4px;
+
 }
 
-.footer_navigation a{
-    font-size: 24px;
-    color: var(--color-pink);
-    text-decoration: none;
-}
-
-.footer_enlaces {
-
-    height: 200px;
-
+.social-links a{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 4px;
-}
-
-.footer_enlaces div {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer_enlaces a{
-
-    font-size: 24px;
-    color: var(--color-pink);
     text-decoration: none;
+    min-height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    margin-inline: 10px;
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all .5s ease;
+    color: white;
 }
+
+.gmail:hover {
+    color: rgb(175, 32, 32);
+    font-size: 28px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px white;
+
+}
+
+.instagram:hover {
+    background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+    font-size: 28px;
+    box-shadow: 0px 0px 5px 0px #d92e7f;
+}
+
+.tiktok:hover{
+
+    font-size: 28px;
+    background-color: black;
+    box-shadow: 0px 0px 5px 0px white;
+    text-shadow: 1.2px 1.2px 0 #fe2d52, -1.2px -1.2px 0 #28ffff;
+    
+}
+
+.linkedin:hover{
+
+    font-size: 28px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px white;
+    color: #0a66c2;
+    
+}
+
