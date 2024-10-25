@@ -87,6 +87,7 @@ main {
     margin-left: 4%;
     height: 8vh;
     width: auto;
+    z-index: 1;
 }
 
 .header_nav {
@@ -228,6 +229,7 @@ main {
     flex-direction: column;
 
     background-color: #fff;
+    z-index: 1;
 }
 
 
