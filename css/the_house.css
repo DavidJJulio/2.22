@@ -53,6 +53,7 @@ body {
     font-family: "normal";
     background-color: #f4f4f9;
     line-height: 1.6;
+    user-select: none; 
 }
 
 main {
@@ -90,12 +91,20 @@ main {
 
 */
 
-/* General Styles */
 .header_logo {
     margin-left: 4%;
     height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: auto;
     z-index: 1;
+}
+
+.header_logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }
 
 .header_nav {
@@ -132,7 +141,7 @@ main {
 .header_nav ul .focus {
     border-radius: 8px;
     background-color: var(--color-pinker);
-    padding: 11%;
+    padding: 20%;
 }
 
 .header_nav ul .focus:hover {
@@ -150,8 +159,19 @@ main {
 /* Media Queries for Mobile */
 @media screen and (max-width: 1024px) {
 
+    .header_logo img {
+        width: 60px;
+        height: 60px;
+    }
+
     .header_nav {
         width: 100%;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .header_nav ul {
@@ -161,13 +181,14 @@ main {
         top: 8vh; /* Below the header */
         right: 0;
         width: 100%;
-        background-color: white;
+        background-color: #fff;
         padding-right: 0;
         padding-left: 0;
     }
 
     .header_nav ul .focus {
         padding: 2%;
+        color: white;
     }
 
     .header_nav ul li {
@@ -178,13 +199,15 @@ main {
     .header_nav ul.show { /* Class to show the menu */
         display: flex;
         gap: 30px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+
     }
 
     /* Show the menu toggle button on mobile screens */
     .menu-toggle {
         display: block;
         cursor: pointer;
-        position: absolute;
         right: 5%;
         top: 3vh;
     }
@@ -211,7 +234,6 @@ main {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 }
-
 
 
 

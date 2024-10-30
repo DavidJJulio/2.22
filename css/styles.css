@@ -49,7 +49,8 @@ body {
     "main"
     "footer"
     ;
-    height: auto;       
+    height: auto;      
+    user-select: none; 
 }
 
 header {
@@ -93,12 +94,20 @@ main {
 
 */
 
-/* General Styles */
 .header_logo {
     margin-left: 4%;
     height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: auto;
     z-index: 1;
+}
+
+.header_logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }
 
 .header_nav {
@@ -153,8 +162,19 @@ main {
 /* Media Queries for Mobile */
 @media screen and (max-width: 1024px) {
 
+    .header_logo img {
+        width: 60px;
+        height: 60px;
+    }
+
     .header_nav {
         width: 100%;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .header_nav ul {
@@ -191,7 +211,6 @@ main {
     .menu-toggle {
         display: block;
         cursor: pointer;
-        position: absolute;
         right: 5%;
         top: 3vh;
     }
