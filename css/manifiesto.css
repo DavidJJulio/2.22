@@ -396,6 +396,53 @@ main {
     
 }
 
+@media (max-width: 900px) {
+
+    .parrafo {
+
+        padding-right: 0px;
+        padding-left: 0px;
+
+    }
+
+    .primer_p {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        padding-top: 10%;
+
+    }
+
+    .segundo_p .text_container {
+        text-align: right;
+    }
+    
+
+    .image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .text_container h2 {
+
+        width: auto;
+        font-size: 20px;
+        
+
+    }
+
+    .text_container p {
+        font-size: 10px;
+    }
+    
+}
+
+
 
 
 

@@ -31,6 +31,7 @@ header {
     padding: 20px;
 
     background-color: #fff;
+    z-index: 1;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -44,7 +45,7 @@ body {
     justify-content: space-between;
 
     font-family: "normal";
-    background-color: #f0f0f0;
+    background-color: #f4f4f9;
     line-height: 1.6;
 }
 
@@ -55,9 +56,33 @@ main {
 
     padding-top: 100px;
 
-    background-color: #f0f0f0;
+    background-color: #f4f4f9;
     text-align: center;
 
+}
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "normal";
+
+}
+
+.elemento {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.elemento.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
@@ -229,6 +254,8 @@ main {
     flex-direction: column;
 
     background-color: #fff;
+    z-index: 1;
+    position: relative;
 
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.233);
 
@@ -239,24 +266,89 @@ main {
     height: auto;
     width: 100%;
 
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+
     padding: 4%;
     
-   
+   justify-content: center;
+   align-items: center;
     text-align: center;
 }
 
 .registro_marca_div h1 {
     
-    width: 100%;
+    display: block;
+    width: 50%;
 
     font-size: 48px;
     margin-bottom: 40px;
-    color: #000;
+    color: var(--color-green);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.582);
 }
-.registro_marca_div div {
+.content {
 
+    width: 100%;
     color: rgba(0, 0, 0, 0.7);
     margin-bottom: 40px;
+    gap: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.First_p {
+
+    display: flex;
+    flex-direction: row;
+    gap: 4%;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.First_p p {
+    width: 40%;
+    font-size: 30px;
+    color: #202124;
+    text-align: center;
+}
+
+.First_p img {
+
+    width: 45%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.Second_p {
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding: 4%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Second_p h1 {
+    width: 50%;
+    border-bottom: none;
+    text-align: left;
+    color: black;
+
+}
+
+.Second_p p {
+    width: 40%;
+    text-align: center;
+    font-size: 24px;
+    color: #202124;
 }
 
 .registro_marca_div div h5 {
@@ -265,13 +357,130 @@ main {
     font-size: 22px;
     margin-bottom: 24px;
 }
+@media (max-width: 1600px) {
 
-.registro_marca_div div p {
-    
-    font-size: 20px;
-    margin-bottom: 12px;
-    
+    .First_p img{
+        width: 52%;
+    }
+
+    .First_p p {
+        font-size: 28px;
+    }
 }
+
+@media (max-width: 1300px) {
+
+    .First_p p {
+        font-size: 24px;
+    }
+
+    .Second_p h1 {
+        font-size: 36px;
+
+    }
+    .Second_p p {
+        font-size: 22px;
+    }
+
+
+}
+
+@media (max-width: 1025px) {
+
+    .First_p p {
+        font-size: 20px;
+    }
+
+    .Second_p h1 {
+        font-size: 36px;
+
+    }
+    .Second_p p {
+        font-size: 20px;
+    }
+
+}
+@media (max-width: 900px) {
+
+    .First_p p {
+        font-size: 18px;
+    }
+
+    .First_p img {
+        width: 60%;
+        object-fit: cover;
+        height: 100%;
+    }
+
+    .Second_p h1 {
+        font-size: 36px;
+
+    }
+    .Second_p p {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .registro_marca_div h1 {
+        margin: 0;
+    }
+
+    .registro_marca_div {
+        gap: 0;
+    }
+    
+    .First_p {
+        flex-direction: column;
+    }
+
+    .First_p p{
+        width: 90%;
+    }
+
+    .First_p img {
+        width: 90%;
+    }
+
+    .Second_p h1 {
+        font-size: 36px;
+
+    }
+    .Second_p p {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .registro_marca_div h1 {
+        font-size: 36px;
+    }
+
+    .Second_p {
+        flex-direction: column;
+
+    }
+
+    .Second_p h1 {
+        width: 100%;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 20px;
+
+    }
+    .Second_p p {
+        font-size: 18px;
+        width: 90%;
+    }
+
+}
+
+
+
 
 
 
@@ -295,6 +504,7 @@ main {
     flex-direction: row;
     padding: 5% 8%;
     gap: 6%;
+    z-index: 0;
     background-color: #f0f0f0;
     transition: background-color 0.3s ease-in-out;
 
