@@ -796,8 +796,10 @@ button[type="submit"]:focus {
     }
 
     .section_call .coffe {
-        font-size: 26px;
+        font-size: 24px;
+        width: 90%;
     }
+
 
     .contacto_container h2 {
 
@@ -828,6 +830,11 @@ button[type="submit"]:focus {
         font-weight: 500;
         color: var(--color-light-green);
         width: auto;
+    }
+
+    .section_call .coffe{
+        font-size: 26px;
+        width: 90%;
     }
 
     .formulario_contenedor {
