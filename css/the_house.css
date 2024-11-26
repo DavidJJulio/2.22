@@ -384,6 +384,12 @@ main {
         }
         
     }
+    .footer-links {
+        margin-bottom: 30px;
+    }
+    .legal {
+        font-size: 10px;
+    }
 
     .abogado_1 {
 
@@ -703,3 +709,9 @@ main {
     
 }
 
+.legal {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: rgba(255, 255, 255, 0.705);
+}

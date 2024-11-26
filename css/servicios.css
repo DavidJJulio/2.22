@@ -261,6 +261,7 @@ main {
 
     background-color: #fff;
     z-index: 0;
+
 }
 
 
@@ -295,7 +296,7 @@ main {
 .first_container_1 h5 {
     font-size: 28px;
     width: 70%;
-    color: var(--color-pinker);
+    color: var(--color-dark-green);
     text-align: center;
 }
 
@@ -330,12 +331,11 @@ main {
     align-items: center;
     flex-direction: column;
     background-color: #fff;
-    border: 1px solid #f0f0f0;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 4%;
     padding-top: 12%;
     gap: 4%;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 15px 0px rgb(204, 204, 204);
 }
 
 .cards_container div i {
@@ -374,7 +374,7 @@ main {
 
     font-size: 28px;
     text-align: center;
-    color: var(--color-pinker);
+    color: var(--color-light-green);
 
 }
 
@@ -410,11 +410,13 @@ main {
     align-items: center;
     height: 100px;
     gap: 4%;
-    background-color: var(--color-white);
-    border-radius: 5px;
+    background-color: white;
+    border-radius: 10px;
 
 
 }
+
+
 
 .bullet_points p {
     font-size: 24px;
@@ -521,6 +523,10 @@ main {
     .second_mini_container p {
         font-size: 20px;
     }
+
+    .footer-links {
+        margin-bottom: 20px;
+    }
     
 }
 
@@ -572,9 +578,14 @@ main {
 
     .bullet_points div {
         width: 200px;
+        background-color: white;
     }
     .third p {
         font-size: 20px;
+    }
+
+    .footer-links {
+        margin-bottom: 20px;
     }
 }
 
@@ -585,6 +596,14 @@ main {
     }
     .bullet_points div {
         width: 150px;
+    }
+
+    .footer-links {
+        margin-bottom: 30px;
+    }
+
+    .legal {
+        font-size: 10px;
     }
 }
 
@@ -750,3 +769,9 @@ main {
     
 }
 
+.legal {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: rgba(255, 255, 255, 0.705);
+}

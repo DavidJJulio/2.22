@@ -46,11 +46,11 @@
 
                 <div class="text_container">
 
-                    <h2>Creemos en una visión <strong style="color: var(--color-black);">transformadora</strong> del derecho</h2>
+                    <h2>ABORDAMOS</h2>
                     <p>
-                        El Universo nos pide que busquemos conexiones reales y nos enseña que siempre es más sencillo y llevadero recorrer el viaje en compañía. 
-                        Sobre la base de esta hermosa filosofía nace 222, un espacio que nos motiva a evolucionar y a vivir en el presente, 
-                        aquí y ahora, en el lugar y momento indicado para hacer todo aquello que nos apasiona. 
+                        Cada proyecto de manera holística y especializada, 
+                        vemos todo un mundo por explorar alrededor de una marca pues la estética es 
+                        importante, pero sin contexto e intención es irrelevante.
                     </p>
 
                 </div>
@@ -65,11 +65,11 @@
 
                 <div class="text_container">
 
-                    <h2>Creemos en una visión <strong style="color: white;">transformadora</strong> del derecho</h2>
+                    <h2>CREAMOS</h2>
                     <p>
-                        El Universo nos pide que busquemos conexiones reales y nos enseña que siempre es más sencillo y llevadero recorrer el viaje en compañía. 
-                        Sobre la base de esta hermosa filosofía nace 222, un espacio que nos motiva a evolucionar y a vivir en el presente, 
-                        aquí y ahora, en el lugar y momento indicado para hacer todo aquello que nos apasiona. 
+                        Herramientas poderosas para que cada proyecto no solo sea legalmente sólido, 
+                        sino que tenga la fuerza necesaria para trascender y convertirse 
+                        en una marca que viva de su verdadero propósito, uno real, tangible y auténtico.
                     </p>
 
                 </div>
@@ -83,11 +83,10 @@
 
                 <div class="text_container">
 
-                    <h2>Creemos en una visión <strong style="color: var(--color-black);">transformadora</strong> del derecho</h2>
+                    <h2>CREEMOS</h2>
                     <p>
-                        El Universo nos pide que busquemos conexiones reales y nos enseña que siempre es más sencillo y llevadero recorrer el viaje en compañía. 
-                        Sobre la base de esta hermosa filosofía nace 222, un espacio que nos motiva a evolucionar y a vivir en el presente, 
-                        aquí y ahora, en el lugar y momento indicado para hacer todo aquello que nos apasiona. 
+                        En la potencia de una buena comunicación estratégica que transmita el mensaje real de las marcas y conecte con 
+                        las emociones de los consumidores, por eso, contamos con aliados clave en mentoring empresarial, diseño holístico, y storytelling.
                     </p>
 
                 </div>
@@ -100,6 +99,32 @@
             
 
         </section>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll(".manifiesto_section .parrafo");
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                    const parrafo = entry.target;
+                    parrafo.classList.add("visible");
+
+                    // Activa las animaciones de texto e imagen dentro del párrafo
+                    const textContainer = parrafo.querySelector(".text_container");
+                    const image = parrafo.querySelector(".image");
+                    if (textContainer) textContainer.classList.add("visible");
+                    if (image) image.classList.add("visible");
+                    }
+                });
+                },
+                { threshold: 0.2 } // Activa cuando el 20% del elemento es visible
+            );
+
+            elements.forEach((el) => observer.observe(el));
+            });
+        </script>
 
 
     </main>
@@ -148,6 +173,7 @@
                         <a class="tiktok" href="https://www.tiktok.com/@222legalhouse"><i class='bx bxl-tiktok'></i></a>
                         <a class="linkedin" href="#"><i class='bx bxl-linkedin' ></i></a>
                     </div>
+                    <h5 class="legal">@ 222 Legal Holistic House</h5>
 
                 </div>
             </div>
@@ -164,11 +190,11 @@
             if (main.classList.contains('opacity-on')) {
                 main.style.opacity = 1;
                 main.classList.remove('opacity-on');
-                main.style.pointerEvents = 'auto'; // Habilita la interacción cuando el menú está cerrado
+                main.style.pointerEvents = 'auto';
             } else {
                 main.style.opacity = 0;
                 main.classList.add('opacity-on');
-                main.style.pointerEvents = 'none'; // Deshabilita la interacción mientras el menú está desplegado
+                main.style.pointerEvents = 'none';
             }
             menuToggle.classList.toggle('active');
             nav.classList.toggle('show');

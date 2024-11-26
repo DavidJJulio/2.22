@@ -308,7 +308,7 @@ main {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    background-color: var(--color-pinker);
+    background-color: var(--color-light-green);
     border-bottom: 2px solid #f0f0f0;
     justify-content: center;
 
@@ -341,8 +341,8 @@ main {
 
 .image img {
 
-    width: 65%;
-    height: 65%;
+    width: 55%;
+    height: 55%;
 
 }
 
@@ -352,13 +352,13 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-inline: 4%;
+    padding-inline: 8%;
 
 }
 
 .text_container h2 {
     
-    font-size: 48px;
+    font-size: 38px;
     margin-bottom: 20px;
     color: #000;
 
@@ -366,11 +366,44 @@ main {
 
 .text_container p {
     
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 12px;
     color: rgba(0, 0, 0, 0.726);
     
 }
+
+.manifiesto_section .parrafo {
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+
+  .manifiesto_section .parrafo.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .manifiesto_section .text_container {
+    opacity: 0;
+    transform: translateX(-50px); 
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+
+  .manifiesto_section .text_container.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .manifiesto_section .image {
+    opacity: 0;
+    transform: translateX(50px); 
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+
+  .manifiesto_section .image.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
 @media (max-width: 1024px) {
 
@@ -402,6 +435,10 @@ main {
     .image img {
         width: 100%;
         height: 100%;
+    }
+
+    .text_container {
+        padding-inline: 4%;
     }
 
     .text_container h2 {
@@ -460,6 +497,14 @@ main {
 
     .text_container p {
         font-size: 10px;
+    }
+
+    .legal {
+        font-size: 10px;
+    }
+
+    .footer-links {
+        margin-bottom: 30px;
     }
     
 }
@@ -631,3 +676,9 @@ main {
     
 }
 
+.legal {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: rgba(255, 255, 255, 0.705);
+}
