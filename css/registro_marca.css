@@ -151,7 +151,10 @@ html {
 .header_nav ul .focus {
     border-radius: 8px;
     background-color: var(--color-pinker);
-    padding: 20%;
+    padding-inline: 20%;
+    padding-top: 16%;
+    padding-bottom: 16%;
+    line-height: 1.3;
 }
 
 .header_nav ul .focus:hover {

@@ -114,7 +114,6 @@ main {
     width: 50%;
 }
 
-/* Hide menu by default for small screens */
 .header_nav ul {
     display: flex;
     gap: 4%;
@@ -123,12 +122,10 @@ main {
     list-style: none;
 }
 
-/* Hide the menu toggle button on large screens */
 .menu-toggle {
     display: none;
 }
 
-/* Header Navigation links */
 .header_nav ul li a {
     text-decoration: none;
     color: var(--color-black);
@@ -138,7 +135,7 @@ main {
 }
 
 .header_nav ul li a:hover {
-    color: var(--color-pinker);
+    color: var(--color-light-green);
 }
 
 .header_nav ul .focus {
@@ -159,7 +156,6 @@ main {
     align-items: center;
 }
 
-/* Media Queries for Mobile */
 @media screen and (max-width: 1024px) {
 
     .header_logo img {
@@ -178,10 +174,10 @@ main {
     }
 
     .header_nav ul {
-        display: none; /* Initially hidden */
-        flex-direction: column; /* Stack menu items */
+        display: none;
+        flex-direction: column;
         position: absolute;
-        top: 8vh; /* Below the header */
+        top: 8vh;
         right: 0;
         width: 100%;
         background-color: #fff;
@@ -199,7 +195,7 @@ main {
         text-align: center;
     }
 
-    .header_nav ul.show { /* Class to show the menu */
+    .header_nav ul.show {
         display: flex;
         gap: 30px;
         padding-bottom: 20px;
@@ -207,7 +203,6 @@ main {
 
     }
 
-    /* Show the menu toggle button on mobile screens */
     .menu-toggle {
         display: block;
         cursor: pointer;
@@ -224,7 +219,6 @@ main {
         transition: 0.3s;
     }
 
-    /* Menu toggle animation when active */
     .menu-toggle.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
@@ -269,13 +263,57 @@ main {
     z-index: 0;
 }
 
+.section_call::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../storage/img/callout2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--color-dark-green);
+    z-index: -10;
+}
 
+.section_call::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000059;
+    z-index: -9;
+}
+
+
+.section_call div{
+
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.section_call .coffe {
+
+    font-size: 44px;
+    text-align: center;
+    width: 100%;
+
+}
 
 .section_call h2 {
     
     margin-bottom: 20px;
 
-    font-size: 44px;
+    width: 50%;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+
 }
 
 .cta-button {
@@ -288,16 +326,28 @@ main {
 
     text-decoration: none;
     font-size: 64px;
-    color: #21a700;
+    color: #29cf00;
     
     transition: 0.3s;
 }
 
 .cta-button:hover {
 
-    text-shadow: 0px 0px 2px #21a700;
+    text-shadow: 0px 0px 3px #3cff00;
 
     transition: 0.3s;
+}
+
+@media (max-width: 1024px) {
+
+    .section_call h2 {
+        font-size: 20px;
+
+    }
+    
+    .section_call .coffe {
+        font-size: 32px;
+    }
 }
 
 
@@ -387,7 +437,7 @@ main {
 
 .filosofia_texto a:hover {
 
-    border-bottom: solid 2px var(--color-pinker);
+    border-bottom: solid 2px var(--color-dark-green);
 
 }
 
@@ -472,6 +522,25 @@ main {
     object-fit: contain;
     width: 50%;
     height: 50%;
+}
+
+.section_filosofia a{
+    text-decoration: none;
+    width: auto;
+}
+
+.section_filosofia a p{
+    font-size: 2em;
+    font-weight: 500;
+    color: var(--color-light-green);
+    width: auto;
+}
+
+.section_filosofia a p:hover{
+    
+    color: var(--color-dark-green);
+    border-bottom: 2px solid var(--color-dark-green);
+    width: auto;
 }
 
 
@@ -590,7 +659,7 @@ input[type="text"]:focus,
 input[type="number"]:focus,
 textarea:focus {
     outline: none; 
-    border: 2px solid var(--color-pinker); 
+    border: 2px solid var(--color-light-green); 
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); 
     border-radius: 8px;
 }
@@ -612,7 +681,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: var(--color-pinker);
+    background-color: var(--color-light-green);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transform: translateY(-3px);
     text-shadow: 0px 0px 1px white;
@@ -631,7 +700,7 @@ input[type="text"]:hover,
 input[type="number"]:hover, 
 textarea:hover {
     transform: scale(1.02);
-    border: 2px solid var(--color-pinker);
+    border: 2px solid var(--color-light-green);
     border-radius: 8px;
 }
 
@@ -639,24 +708,6 @@ button[type="submit"]:focus {
     box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.3);
 }
 
-.section_filosofia a{
-    text-decoration: none;
-    width: auto;
-}
-
-.section_filosofia a p{
-    font-size: 2em;
-    font-weight: 500;
-    color: var(--color-black);
-    width: auto;
-}
-
-.section_filosofia a p:hover{
-    
-    color: var(--color-pinker);
-    border-bottom: 2px solid var(--color-pinker);
-    width: auto;
-}
 
 /* Estilo responsive */
 @media (max-width: 1024px) {
@@ -732,9 +783,27 @@ button[type="submit"]:focus {
         margin-top: 60px;
         font-size: 1.15em;
         font-weight: 500;
-        color: var(--color-black);
+        color: var(--color-light-green);
         width: auto;
     }
+
+    .filosofia_container {
+        margin-bottom: 20px;
+    }
+
+    .section_call h2 {
+        font-size: 16px;
+    }
+
+    .section_call .coffe {
+        font-size: 26px;
+    }
+
+    .contacto_container h2 {
+
+        font-size: 26px;
+    }
+    
 
 }
 
@@ -757,7 +826,7 @@ button[type="submit"]:focus {
         margin-top: 40px;
         font-size: 1.15em;
         font-weight: 500;
-        color: var(--color-black);
+        color: var(--color-light-green);
         width: auto;
     }
 
@@ -780,7 +849,7 @@ button[type="submit"]:focus {
     }
 
     .contacto_container h2 {
-        font-size: 2.2em;
+        font-size: 32px;
     }
 
     .contacto_container p {
@@ -793,6 +862,14 @@ button[type="submit"]:focus {
 
     .form_group {
         margin-bottom: 16px;
+    }
+    
+    .legal {
+        font-size: 10px;
+    }
+
+    .footer-links {
+        margin-bottom: 20px;
     }
 
     
@@ -963,5 +1040,12 @@ button[type="submit"]:focus {
     box-shadow: 0px 0px 5px 0px white;
     color: #0a66c2;
     
+}
+
+.legal {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: rgba(255, 255, 255, 0.705);
 }
 
