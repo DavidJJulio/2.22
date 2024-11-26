@@ -450,7 +450,7 @@ main {
     }
 
     .text_container p {
-        font-size: 12px;
+        font-size: 16px;
     }
     
 }
@@ -478,7 +478,7 @@ main {
     
 
     .image {
-        width: 100%;
+        width: 80%;
         height: 100%;
     }
 
@@ -490,13 +490,13 @@ main {
     .text_container h2 {
 
         width: auto;
-        font-size: 20px;
+        font-size: 22px;
         
 
     }
 
     .text_container p {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .legal {
