@@ -287,7 +287,7 @@ main {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #00000059;
+    background-color: #00000085;
     z-index: -9;
 }
 
@@ -355,6 +355,7 @@ main {
         font-size: 32px;
     }
 }
+
 
 
 

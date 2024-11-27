@@ -62,6 +62,24 @@
 
         </section>
 
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target); // Deja de observar después de activarse
+                    }
+                });
+            });
+
+            const target = document.querySelector(".abogado_1");
+            if (target) {
+                observer.observe(target);
+            }
+        });
+        </script>
+
 
 
         <section class="aliances_section">
