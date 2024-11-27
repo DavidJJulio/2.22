@@ -305,8 +305,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     padding-inline: 4%;
     gap: 50px;
+    margin-top: 4%;
 
 }
 
@@ -314,6 +316,7 @@ main {
 
     position: relative;
     width: 100%;
+    max-width: 500px;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -322,6 +325,48 @@ main {
 
 
 }
+
+
+.cards_container .mini_container {
+    opacity: 0; 
+    transform: translateY(50px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
+}
+
+/* Estilo cuando son visibles */
+.cards_container .mini_container.visible {
+    
+opacity: 1;
+transform: translateY(0); 
+
+}
+
+.m1 {
+    animation: moveUpDown 2.8s ease-in infinite;
+}
+.m2 {
+    animation: moveUpDown 2.6s ease-in infinite;
+}
+
+.m3 {
+    animation: moveUpDown 3.1s ease-in infinite;
+}
+.m4 {
+    animation: moveUpDown 2.4s ease-in infinite;
+}
+
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
 
 .mini_container div{
     width: 95%;
@@ -374,7 +419,7 @@ main {
 
     font-size: 28px;
     text-align: center;
-    color: var(--color-light-green);
+    color: var(--color-pink);
 
 }
 
@@ -416,6 +461,11 @@ main {
 
 }
 
+.bullet_points div:hover {
+    transform: scale(1.05);
+    transition: transform .3s ease-in;
+}
+
 
 
 .bullet_points p {
@@ -438,7 +488,8 @@ main {
 }
 
 .call a:hover {
-    border-bottom: 1px solid var(--color-pinker);
+    border-bottom: 2px solid var(--color-pinker);
+    font-weight: 450;
 }
 
 .third div {

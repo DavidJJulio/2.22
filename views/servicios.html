@@ -12,7 +12,7 @@
 
     <header id="inicio">
         <div class="header_logo">
-            <img src="../storage/img/r2.png" alt="">
+            <img src="../storage/img/Screenshot from 2024-11-26 19-02-10.png" alt="">
         </div>
         <nav class="header_nav">
             <ul>
@@ -37,11 +37,11 @@
             <div class="servicios_div first">
                 <h1>Servicios</h1>
                 <div class="first_container_1">
-                    <h5>Nos enfocamos en tres aspectos fundamentales para el desarrollo integral de tu negocio:</h5>
+                    <h5>Nos enfocamos en cuatro aspectos fundamentales para el desarrollo integral de tu negocio:</h5>
 
                     <div class="cards_container">
 
-                        <div class="mini_container">
+                        <div class="mini_container m1">
                             <i style="background-color: var(--color-dark-green);">1</i>
                             <div>
                                 <h1>Te acompañamos</h1>
@@ -49,7 +49,7 @@
                             </div>
                         </div>
 
-                        <div class="mini_container">
+                        <div class="mini_container m2">
                             <i style="background-color: var(--color-light-green);">2</i>
                             <div>
                                 <h1>Diseñamos</h1>
@@ -57,22 +57,49 @@
                             </div>
                         </div>
 
-                        <div class="mini_container">
+                        <div class="mini_container m3">
                             <i style="background-color: var(--color-pinker);">3</i>
                             <div>
                                 <h1>Brindamos</h1>
                                 <p>Capacitación a equipos creativos de las empresas con el propósito de detectar y prevenir riesgos asociados a la protección marcas y Derechos de Autor.</p>
                             </div>
                         </div>
+
+                        <div class="mini_container m4">
+                            <i style="background-color: var(--color-pink);">4</i>
+                            <div>
+                                <h1>Construimos</h1>
+                                <p>La ruta para que importes o exportes tus productos y servicios con éxito garantizado, asegurando que cada paso esté blindado legalmente.</p>
+                            </div>
+                        </div>
                     
                     </div>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                        const cards = document.querySelectorAll(".cards_container .mini_container");
+
+                        const observer = new IntersectionObserver(
+                            (entries) => {
+                            entries.forEach((entry) => {
+                                if (entry.isIntersecting) {
+                                entry.target.classList.add("visible");
+                                }
+                            });
+                            },
+                            { threshold: 0.2 } // Activa la animación cuando el 20% de la card es visible
+                        );
+
+                        cards.forEach((card) => observer.observe(card));
+                        });
+                    </script>
                     
                 </div>
                 
                 <div class="servicios_div second">
                     <h5>Nuestro mantra para ti siempre será: hacerlo obvio, hacerlo sencillo y hacerlo atractivo. </h5>
                     <div class="second_mini_container">
-                        <p>Contamos con tres planes iniciales adaptables según tus necesidades y la etapa en la que te encuentres como emprendedor o empresario, logrando así:</p>
+                        <p>Contamos con planes adaptables según tus necesidades y la etapa en que te encuentres como emprendedor o empresario, logrando así...</p>
                         <div class="bullet_points">
                             <div>
                                 <img src="../storage/img/d2e29bc8-4bf0-4d4f-8d73-b34ecaa0bfb0.jpg" alt="">
@@ -95,15 +122,7 @@
             </div>
         </section>
 
-        <section class="servicios_section elemento" data-scroll>
-            <div class="servicios_div third">
-                <h1>Otros servicios</h1>
-                <div>
-                    <p>Asesoría legal 1:1 para emprendedores, comerciantes, y empresarios <br> en asuntos aduaneros y de comercio exterior (Importación /exportación de productos y/o servicios). </p>
-                    <p class="call">Sientete libre de preguntar <a href="../index.html#contacto">aqui</a></p>
-                </div>
-            </div>
-        </section>
+        
     </main>
 
     <footer class="footer elemento" data-scroll>
