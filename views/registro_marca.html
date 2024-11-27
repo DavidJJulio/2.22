@@ -52,14 +52,34 @@
                         <img src="../storage/img/8001997.jpg" alt="">
                     </div>
                     
-                    <div class="Second_p">
-                        <h1>Por eso, en solo <strong style="color: var(--color-pinker);">2 pasos</strong> <br>puedes dar inicio al trámite de protección de tu marca.</h1>
-                        <p>Lo único que debes hacer, es diligenciar el siguiente formulario con los datos más importantes de tu marca ¡Y listo!, en 24-48 horas recibirás un informe completo y detallado sobre la probabilidad de éxito del registro, las recomendaciones a seguir y los términos para iniciar la siguiente etapa que consiste en presentar la solicitud en línea.</p>
-                    </div>
-                    
+                </div>
 
+                <div class="content_2">
+                    <div class="Second_p">
+                        <h1>Por eso, en solo <strong style="color: #000;">2 pasos</strong> <br>puedes dar inicio al trámite de protección de tu marca.</h1>
+                        <p>Diligencia el formulario con los datos clave de tu marca 
+                            ¡Y listo! en 24 - 48 horas hábiles recibirás un informe detallado sobre la probabilidad de éxito del registro y los pasos para presentar la solicitud en línea.</p>
+                    </div>
                 </div>
             </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target); // Detiene la observación después de aplicar la animación
+                        }
+                    });
+                });
+
+                const target = document.querySelector(".content_2");
+                if (target) {
+                    observer.observe(target);
+                }
+            });
+            </script>
 
         </section>
 
@@ -72,7 +92,7 @@
             <div class="contacto_container">
 
                 <h2>Estudio de viabilidad</h2>
-                <p>Si quieres que revisemos tu caso <br><span style="color: var(--color-pinker);">contactanos</span></p>
+                <p>Es tan <span style="color: var(--color-pinker);">facil</span> como diligenciar este formulario</p>
 
             </div>
 
