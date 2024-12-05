@@ -110,9 +110,9 @@ html {
 }
 
 .header_logo img {
-    width: 100px;
+    width: 300px;
     height: 100px;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .header_nav {
