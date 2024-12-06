@@ -105,9 +105,9 @@ main {
 }
 
 .header_logo img {
-    width: 300px;
+    width: 120px;
     height: 100px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .header_nav {
@@ -165,8 +165,10 @@ main {
 @media screen and (max-width: 1024px) {
 
     .header_logo img {
-        width: 60px;
+        width: 80px;
         height: 60px;
+        object-fit: contain;
+        object-position: bottom;
     }
 
     .header_nav {
