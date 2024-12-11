@@ -148,7 +148,7 @@ main {
     text-decoration: none;
     color: var(--color-black);
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
@@ -372,6 +372,7 @@ main {
     font-size: 38px;
     margin-bottom: 20px;
     color: #000;
+    font-weight: 600;
 
 }
 

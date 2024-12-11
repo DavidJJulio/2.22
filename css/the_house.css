@@ -131,7 +131,7 @@ main {
     text-decoration: none;
     color: var(--color-black);
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
@@ -277,6 +277,7 @@ main {
     font-size: 48px;
     color: var(--color-black);
     margin-bottom: 65px;
+    font-weight: 600;
 }
 
 .abogado_1 {
@@ -408,6 +409,7 @@ main {
     margin-bottom: 24px;
     text-align: left;
     color: rgb(0, 0, 0);
+    font-weight: 600;
 }
 
 .areas {

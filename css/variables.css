@@ -16,3 +16,23 @@
     font-family: "normal";
     src: url(../storage/font/Syne-VariableFont_wght.ttf);
 }
+
+@font-face {
+    font-family: "Bingo";
+    src: url(../storage/font/Bingo\ Dilan.otf);
+}
+
+@font-face {
+    font-family: "Recolecta";
+    src: url(../storage/font/Recoleta-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Muloka";
+    src: url(../storage/font/Muloka\ Kerash.otf);
+}
+
+@font-face {
+    font-family: "Honey";
+    src: url(../storage/font/Honeypirls\ Regular.otf);
+}

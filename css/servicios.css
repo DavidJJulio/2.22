@@ -129,7 +129,7 @@ main {
     text-decoration: none;
     color: var(--color-black);
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
@@ -289,6 +289,7 @@ main {
 
 .first h1 {
     font-size: 48px;
+    font-weight: 600;
 }
 
 .first_container_1 {
@@ -306,6 +307,7 @@ main {
     width: 70%;
     color: var(--color-dark-green);
     text-align: center;
+    font-weight: 600;
 }
 
 .first_container_1 .cards_container {
@@ -406,7 +408,7 @@ transform: translateY(0);
     text-align: center;
     margin-bottom: 10px;
     color: var(--color-white);
-    font-weight: bold;
+    font-weight: 600;
     font-size: 20px;
 
 }
@@ -414,6 +416,7 @@ transform: translateY(0);
 .mini_container div h1 {
     font-size: 36px;
     text-align: center;
+    font-weight: 600;
 }
 
 .mini_container div p {
@@ -428,6 +431,7 @@ transform: translateY(0);
     font-size: 28px;
     text-align: center;
     color: var(--color-pink);
+    font-weight: 600;
 
 }
 

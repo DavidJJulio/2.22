@@ -130,7 +130,7 @@ main {
     text-decoration: none;
     color: var(--color-black);
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
@@ -310,6 +310,7 @@ main {
     font-size: 44px;
     text-align: center;
     width: 100%;
+    font-weight: 600;
 
 }
 
@@ -321,6 +322,7 @@ main {
     color: white;
     text-align: center;
     font-size: 30px;
+    font-weight: 600;
 
 }
 
@@ -612,8 +614,8 @@ main {
 
 .contacto_container h2 {
     font-size: 3em;
-    font-weight: 700;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .contacto_container p {
