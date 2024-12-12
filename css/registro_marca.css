@@ -639,6 +639,16 @@ html {
 
 @media (max-width: 700px) {
 
+    .registro_marca_section {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr .5fr 1fr;
+    grid-template-areas: 
+    "info1 info1"
+    "image_1 image_1"
+    "info2 info2"
+    ;
+    }
+
     .image_2 img {
 
         border-radius: 10%;
@@ -651,34 +661,48 @@ html {
     .image_2 {
 
         align-items: center;
+        display: none;
     }
 
     .image_1 {
 
-        margin-top: 20px;
-
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
     }
 
     .info_2 {
         padding-right: 8%;
+        padding-left: 8%;
+        margin-top: 20px;
+        padding-top: 0;
     }
 
     .info_2_item {
 
-        font-size: 7px;
-        text-align: left;
-        height: 120px;
+        font-size: 10px;
+        text-align: center;
+        height: 140px;
     }
 
     .info_2_item i {
-        width: 15px;
-        height: 15px;
-        font-size: 10px;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
     }
 
     .image_1 img {
 
         border-radius: 10%;
+        height: 100%;
+        width: 55%;
+        object-fit: cover;
     }
 
     .item_container {
@@ -689,25 +713,41 @@ html {
 
     .info_2_h1 {
 
-        font-size: 16px;
+        font-size: 20px;
         width: 100%;
+    }
+
+    .info_1 {
+
+        margin-top: 0;
+        padding: 8%;
     }
 
     .info_1_h1 {
 
-        margin-top: 50px;
-        font-size: 22px;
-        width: 90%;
+        margin-top: 0;
+        font-size: 32px;
+        width: 100%;
+        text-align: center;
 
     }
 
     .info_1_div {
 
-        font-size: 6px;
-        padding: 1.5%;
+        font-size: 12px;
+        padding: 2%;
         padding-left: 4%;
         gap: 0;
+        width: auto;
     }
+
+    .div_util {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 
     .info_1_div i {
         font-size: 12px;
@@ -717,8 +757,9 @@ html {
     }
 
     .info_1_p {
-        font-size: 9px;
-        width: 88%;
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
     }
     
 }
