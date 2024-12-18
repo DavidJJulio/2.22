@@ -204,8 +204,8 @@ html {
     }
 
     .header_nav ul .focus {
-        padding: 2%;
-        color: white;
+        width: 30%;
+        color: var(--color-pinker);
     }
 
     .header_nav ul li {
@@ -897,7 +897,7 @@ textarea {
 button[type="submit"] {
     padding: 12px 24px;
     border-radius: 8px;
-    background-color: var(--color-black);
+    background-color: #f0f0f0;
     color: white;
     border: none;
     font-size: 16px;
@@ -963,7 +963,7 @@ button[type="submit"]:focus {
 .btn-pago {
     padding: 12px 24px;
     border-radius: 8px;
-    background-color: #f0f0f0;
+    background-color: var(--color-black);
     color: white;
     border: none;
     font-size: 16px;

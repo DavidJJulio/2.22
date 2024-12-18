@@ -194,8 +194,8 @@ main {
     }
 
     .header_nav ul .focus {
-        padding: 2%;
-        color: white;
+        width: 30%;
+        color: var(--color-pinker);
     }
 
     .header_nav ul li {
