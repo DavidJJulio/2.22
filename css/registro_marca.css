@@ -84,15 +84,6 @@ html {
     transform: translateY(0);
 }
 
-
-
-
-
-
-
-
-
-
 /*
 
     ELEMENTOS DEL HEADER
@@ -252,14 +243,6 @@ html {
     }
 }
 
-
-
-
-
-
-
-
-
 /*
 
     ELEMENTOS DEL SECTION #1, SERVICIO DE MARCA.
@@ -305,7 +288,7 @@ html {
 
     width: 70%;
     text-align: left;
-    font-size: 19px;
+    font-size: 28px;
     color: rgb(20, 20, 20);
 
 }
@@ -762,20 +745,6 @@ html {
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 
     SECTION #3, CONTACTO
@@ -1067,11 +1036,6 @@ button[type="submit"]:focus {
 
     
 }
-
-
-
-
-
 
 /*
 
