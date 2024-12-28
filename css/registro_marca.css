@@ -287,7 +287,7 @@ html {
 .info_1_p {
 
     width: 70%;
-    text-align: left;
+    text-align: justify;
     font-size: 28px;
     color: rgb(20, 20, 20);
 
@@ -469,7 +469,8 @@ html {
 
     .info_2_h1 {
 
-        font-size: 32px;
+        font-size: 42px;
+        text-align: justify;
         width: 100%;
     }
 
@@ -485,7 +486,7 @@ html {
     }
 
     .info_1_p {
-        font-size: 17px;
+        font-size: 22px;
         width: 88%;
     }
     

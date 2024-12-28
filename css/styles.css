@@ -494,9 +494,9 @@ main {
 
 .section_filosofia  p {
     
-    width: 40%;
+    width: 60%;
     font-size: 1.7em;
-    text-align: center;
+    text-align: justify;
 
 }
 
@@ -557,17 +557,6 @@ main {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /*
 
     SECTION #3, CONTACTO
@@ -624,6 +613,7 @@ main {
     font-size: 1.8em;
     color: #525252;
     line-height: 1.5;
+    text-align: justify;
 }
 
 form {

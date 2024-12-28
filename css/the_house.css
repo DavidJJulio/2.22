@@ -390,7 +390,8 @@ main {
 .abogado_info p {
 
     color: rgb(0, 0, 0);
-    font-size: 1.6em;
+    font-size: 1.2em;
+    text-align: justify;
 
 }
 

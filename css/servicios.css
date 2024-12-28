@@ -437,9 +437,10 @@ transform: translateY(0);
 
 .second_mini_container p {
 
-    width: 50%;
+    width: 70%;
     font-size: 28px;
     color: #fff;
+    text-align: justify;
 
 }
 
