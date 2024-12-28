@@ -457,7 +457,7 @@ transform: translateY(0);
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 80px;
     gap: 4%;
     background-color: var(--color-pink);
     border-radius: 10px;
